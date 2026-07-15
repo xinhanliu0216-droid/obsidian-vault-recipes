@@ -13,6 +13,20 @@
 
 > `raw/` 永远是只读来源层。批量写入、覆盖、删除和规则变更，都必须先展示计划与目标文件，再由用户确认。
 
+## 先理解这条知识流水线
+
+```text
+原始资料 raw/ → Source 来源页 → Concept / Entity / Topic → Synthesis 综合页 → 查询与维护
+```
+
+- **Raw** 保存原文，不承担解释职责。
+- **Source** 忠实记录一份来源说了什么，并保留定位信息。
+- **Concept / Entity / Topic** 把可复用知识从单一来源中分离出来。
+- **Synthesis** 比较至少两个独立来源，明确支持证据、冲突和未知。
+- **诊断与巡检** 发现断链、孤立页、重复、过期结论和未核实内容。
+
+AI 是受规则约束的知识加工员，不是最终权威。用户负责目标、重要写入和结论判断。页面类型难以判断时，先看 [知识对象与建页决策](docs/knowledge-model.md)。
+
 ## 快速开始
 
 ### 不想用终端
@@ -73,6 +87,9 @@ my-course/
 | 页面模板 | Source、Concept、Entity、Topic、Synthesis | [templates/pages/](templates/pages/) |
 | 可运行示例 | 从原始资料到 Wiki 页面、索引和日志 | [examples/](examples/README.md) |
 | 测试 | 静态检查、初始化烟雾测试和行为验收案例 | [tests/](tests/README.md) |
+| 知识模型 | 判断何时建 Source、Concept、Topic 或 Synthesis | [知识对象与建页决策](docs/knowledge-model.md) |
+| 安全实践 | 敏感资料、联网、共享与 Git 提交检查 | [隐私与安全实践](docs/privacy-and-security.md) |
+| 失败案例 | 学习如何发现并修复重复、断链和越界综合 | [失败与修复示例](examples/failure-recovery/README.md) |
 
 ## 六类场景，一套通用核心
 

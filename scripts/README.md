@@ -49,3 +49,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/test-build-sta
 ```
 
 它们只写入带随机前缀的系统临时目录，并在结束时清理。
+
+## 生成只读健康报告
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/vault-health.ps1 `
+  -VaultPath "D:\Vaults\my-course" `
+  -OutputPath "D:\Vaults\my-course\health-report.md"
+```
+
+脚本只读取 Vault，统计断开的 Wikilink、无有效链接页面、未核实页面、长期未更新页面和重复文件名，不自动修复内容。

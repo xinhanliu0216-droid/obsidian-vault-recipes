@@ -2,6 +2,18 @@
 
 本文件记录面向使用者的主要变化，格式参考 Keep a Changelog。
 
+## Unreleased
+
+### Added
+
+- 增加知识对象建页决策指南、隐私安全实践和失败修复案例。
+- 增加只读 Vault 健康报告脚本与语义质量人工评分标准。
+- 页面模板增加 `last_verified`，Synthesis 增加 `confidence`。
+
+### Changed
+
+- 场景模板改为真正的增量覆盖层，不再重复通用 `CLAUDE.md`。
+- README 首屏增加知识流水线、Agent 角色和新增指南入口。
 ## 1.0.0 - 2026-07-15
 
 ### Added

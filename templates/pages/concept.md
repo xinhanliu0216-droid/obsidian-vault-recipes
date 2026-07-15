@@ -1,13 +1,13 @@
 ---
 title: "{概念名称}"
 type: concept
-status: active
+status: draft
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
+last_verified: YYYY-MM-DD
 tags:
   - concept
 ---
-
 # {概念名称}
 
 ## 定义
@@ -21,4 +21,3 @@ tags:
 - [[来源页面]]
 
 ## 相关页面
-

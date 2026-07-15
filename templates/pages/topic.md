@@ -1,13 +1,13 @@
 ---
 title: "{主题名称}"
 type: topic
-status: active
+status: draft
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
+last_verified: YYYY-MM-DD
 tags:
   - topic
 ---
-
 # {主题名称}
 
 ## 范围

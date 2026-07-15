@@ -1,15 +1,13 @@
 ---
 title: "{来源标题}"
 type: source
-status: processed
-source_file: "raw/{相对路径}"
-source_date:
+status: draft
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
+last_verified: YYYY-MM-DD
 tags:
   - source
 ---
-
 # {来源标题}
 
 ## 来源定位
@@ -30,4 +28,3 @@ tags:
 ## 关联页面
 
 - [[相关概念]]
-
