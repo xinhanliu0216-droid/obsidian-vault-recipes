@@ -59,6 +59,8 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/new-vault.ps1 
 my-course/
 ├── CLAUDE.md          # Agent 的长期规则与权限边界
 ├── raw/               # 原始资料，只读
+├── _staging/          # 长文档解析、manifest 与恢复点
+├── _guides/           # 按需读取的长流程指南
 ├── wiki/
 │   ├── sources/       # 来源页
 │   ├── entities/      # 人物、组织、对象
@@ -82,7 +84,9 @@ my-course/
 |---|---|---|
 | 安装教程 | 从终端、Obsidian 到 Claudian 的完整配置 | [docs/](docs/README.md) |
 | 通用规则 | 规定来源、证据、写入权限和页面职责 | [templates/CLAUDE.md](templates/CLAUDE.md) |
+| CLAUDE.md 设计 | 从目标、输入、失败案例反推规则，含长文档法则 | [设计手册](docs/design-your-claude-md.md) |
 | 场景覆盖层 | 只增加领域差异，避免复制整份规则 | [templates/scenarios/](templates/scenarios/README.md) |
+| 完整 CLAUDE.md 样例 | 六个场景均提供可直接复制并修改的完整文件 | [examples/claude-md/](examples/claude-md/README.md) |
 | Agent Skills | 摄取、构建、查询、巡检和诊断等工作流 | [skills/](skills/README.md) |
 | 页面模板 | Source、Concept、Entity、Topic、Synthesis | [templates/pages/](templates/pages/) |
 | 可运行示例 | 从原始资料到 Wiki 页面、索引和日志 | [examples/](examples/README.md) |

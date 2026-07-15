@@ -44,6 +44,8 @@ function Write-Utf8File {
 $directories = @(
     'raw',
     'raw/assets',
+    '_staging',
+    '_guides',
     'wiki/sources',
     'wiki/entities',
     'wiki/concepts',

@@ -6,6 +6,7 @@
 2. [安装 Obsidian 与 Claudian](02-install-obsidian-and-claudian.md)
 3. [创建第一个 Vault 与 CLAUDE.md](03-create-vault-and-claude-md.md)
 4. [修改和演化 CLAUDE.md](04-modify-claude-md.md)
+5. [CLAUDE.md 设计手册与长文档法则](design-your-claude-md.md)
 5. [测试与维护](05-test-and-maintain.md)
 
 随后选择一个场景：

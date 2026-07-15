@@ -38,6 +38,13 @@ $required = @(
     'examples/course-demo/README.md',
     'examples/research-demo/README.md',
     'examples/project-demo/README.md',
+    'examples/claude-md/README.md',
+    'examples/claude-md/course-CLAUDE.md',
+    'examples/claude-md/research-CLAUDE.md',
+    'examples/claude-md/product-CLAUDE.md',
+    'examples/claude-md/project-CLAUDE.md',
+    'examples/claude-md/personal-CLAUDE.md',
+    'examples/claude-md/book-CLAUDE.md',
     'tests/evals.json'
 )
 
@@ -106,6 +113,22 @@ foreach ($name in $skillNames) {
 }
 
 $scenarioNames = @('course', 'research', 'product', 'project', 'personal', 'book')
+foreach ($name in $scenarioNames) {
+    $samplePath = Join-Path $root "examples/claude-md/$name-CLAUDE.md"
+    if (-not (Test-Path -LiteralPath $samplePath)) {
+        Add-ValidationError "Missing complete CLAUDE sample: $name"
+        continue
+    }
+    $sample = Get-Content -LiteralPath $samplePath -Raw -Encoding UTF8
+    foreach ($marker in @('{{VAULT_NAME}}', '{{VAULT_GOAL}}', '{{PRIMARY_OUTPUT}}', '{{SCENARIO_RULES}}')) {
+        if ($sample.Contains($marker)) {
+            Add-ValidationError "Unresolved marker in complete CLAUDE sample '$name': $marker"
+        }
+    }
+    if (-not $sample.Contains('_staging/manifest.md')) {
+        Add-ValidationError "Complete CLAUDE sample '$name' is missing the long-document manifest rule."
+    }
+}
 foreach ($name in $scenarioNames) {
     foreach ($path in @("templates/scenarios/$name.md", "tests/cases/$name.md")) {
         if (-not (Test-Path -LiteralPath (Join-Path $root $path))) {

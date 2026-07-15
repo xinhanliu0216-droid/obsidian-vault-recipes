@@ -1,15 +1,14 @@
-# 场景选择
+# 六类 LLM Wiki 场景
 
-场景不是互斥的“六套知识库”，而是覆盖在通用 LLM Wiki 之上的规则差异。
+每个场景都围绕同一组问题展开：知识库目标、材料类型、页面类型、摄取规则、查询方式、完成标准和场景专用 `CLAUDE.md` 改写建议。
 
-| 主要目标 | 场景 | 重点 |
+| 场景 | 教程 | 完整 CLAUDE.md 样例 |
 |---|---|---|
-| 学习、备考 | [课程学习](3A-course.md) | 主动回忆、例子、真实错误 |
-| 论文、综述 | [学术研究](3B-research.md) | 引用、方法、证据、争议 |
-| 反馈、机会 | [产品分析](3C-product.md) | 弱信号、假设、实验、决策 |
-| 任务、会议 | [项目管理](3D-project.md) | owner、due、状态证据 |
-| 日记、复盘 | [个人成长](3E-personal.md) | 隐私、模式证据、非诊断 |
-| 书籍、报告 | [图书阅读](3F-book.md) | 章节顺序、主题、位置 |
+| 课程学习 | [3A-course.md](3A-course.md) | [course-CLAUDE.md](../../examples/claude-md/course-CLAUDE.md) |
+| 学术研究 | [3B-research.md](3B-research.md) | [research-CLAUDE.md](../../examples/claude-md/research-CLAUDE.md) |
+| 产品分析 | [3C-product.md](3C-product.md) | [product-CLAUDE.md](../../examples/claude-md/product-CLAUDE.md) |
+| 项目管理 | [3D-project.md](3D-project.md) | [project-CLAUDE.md](../../examples/claude-md/project-CLAUDE.md) |
+| 个人成长 | [3E-personal.md](3E-personal.md) | [personal-CLAUDE.md](../../examples/claude-md/personal-CLAUDE.md) |
+| 图书与长材料 | [3F-book.md](3F-book.md) | [book-CLAUDE.md](../../examples/claude-md/book-CLAUDE.md) |
 
-选择一个主要场景，必要时从次要场景只复制少数页面类型。不要合并互相冲突的创建条件。
-
+选择一个主要场景。完整样例用于理解和快速开始；通用模板与场景覆盖层用于长期维护，避免六份重复规则逐渐漂移。跨场景时只加入真正需要的差异，并明确冲突规则的优先级。
