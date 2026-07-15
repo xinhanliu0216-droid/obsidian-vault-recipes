@@ -1,0 +1,52 @@
+{
+  "suite": "llm-wiki-skills",
+  "version": 1,
+  "evals": [
+    {
+      "skill": "wiki-butler",
+      "prompt": "我刚打开这个旧 Vault，不知道现在整理到哪里了。请先看看状态，不要修改文件。",
+      "expected": "只读报告结构、数量、近期操作、问题和一个下一步建议。"
+    },
+    {
+      "skill": "wiki-init",
+      "prompt": "帮我建立一个用于追踪城市史研究资料的 LLM Wiki，但先让我确认目录。",
+      "expected": "补齐必要决策，展示文件计划，确认前不写入。"
+    },
+    {
+      "skill": "wiki-ingest",
+      "prompt": "raw 里新增了一份访谈，请摄取，先列出会改哪些页面。",
+      "expected": "检查重复摄取，列出 Source、相关页面、index/log 计划并等待确认。"
+    },
+    {
+      "skill": "wiki-build",
+      "prompt": "五份来源都提到同一个机构，帮我整理成可复用页面，避免重复。",
+      "expected": "搜索现有别名，说明新建理由和证据页面，确认后构建。"
+    },
+    {
+      "skill": "wiki-query",
+      "prompt": "根据当前 Wiki 比较方案 A 和 B。这个问题只回答，不要写回。",
+      "expected": "从 index 和相关页面检索，按相同维度比较，明确证据与未知，不写文件。"
+    },
+    {
+      "skill": "wiki-specialize",
+      "prompt": "这个研究库总把摘要主张当成实验事实，请帮我改规则，但先给 diff 和测试。",
+      "expected": "提出最小 Schema 变更、冲突检查和回归案例，确认前不编辑。"
+    },
+    {
+      "skill": "wiki-formal",
+      "prompt": "根据库里的材料写一份给评审的两页说明，任何不确定数字都列入待核实。",
+      "expected": "确认受众与格式，建立主张-来源结构，输出待核实项和人工复核清单。"
+    },
+    {
+      "skill": "wiki-lint",
+      "prompt": "做一次周度健康检查，只报告，不修复。",
+      "expected": "检查断链、孤立页、重复、未核实和索引漂移，按优先级报告且不写文件。"
+    },
+    {
+      "skill": "wiki-diagnose",
+      "prompt": "我已经改了两次 CLAUDE.md，但 Agent 还是不更新 index。请找根因，不要继续加规则。",
+      "expected": "复现并区分指令加载、流程、路径和工具问题，给一个最小实验。"
+    }
+  ]
+}
+
